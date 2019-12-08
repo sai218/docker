@@ -1,0 +1,20 @@
+FROM ubuntu:14.04
+MAINTAINER 8341923436
+RUN apt-get update
+CMD ["echo","This is sai"] >> This is static CMD command and run time we cant change.
+
+
+Ti install any software like git,tree,maven etc.
+
+FROM ubuntu:14.04
+MAINTAINER 8341923436
+RUN apt-get update && apt-get install git -y && apt-get install maven -y  
+ENTRYPOINT ["ping"]  >>  Entry point is static and run continiously  
+CMD ["google.com"]  >> The value can change in run time also 
+
+
+
+
+
+
+

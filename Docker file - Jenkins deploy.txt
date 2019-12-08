@@ -1,0 +1,24 @@
+FROM tomcat:7.0.96-jdk8-openjdk
+MAINTAINER 8341923436
+RUN apt-get update
+COPY jenkins.war /usr/local/tomcat/webapps/
+EXPOSE 8080
+CMD ["catalina.sh","run"]
+
+
+By using Add Command instaed of Copy command:-
+
+FROM tomcat:7.0.96-jdk8-openjdk
+MAINTAINER 8341923436
+RUN apt-get update
+ADD jenkins.war /usr/local/tomcat/webapps/
+WORKDIR /usr/local/tomcat/webapps/ >> it is used for after login into the container it will direct to the defined path 
+EXPOSE 8080
+CMD ["catalina.sh","run"]
+
+
+
+
+
+
+

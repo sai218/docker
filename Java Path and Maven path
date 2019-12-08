@@ -1,0 +1,5 @@
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin
+
+export M2_HOME=/usr/share/maven/
+export PATH=$PATH:$M2_HOME/bin
