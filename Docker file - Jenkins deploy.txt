@@ -6,12 +6,12 @@ EXPOSE 8080
 CMD ["catalina.sh","run"]
 
 
-By using Add Command instaed of Copy command:-
+BY USING ADD COMMAND INSTAED OF COPY COMMAND:-
 
 FROM tomcat:7.0.96-jdk8-openjdk
 MAINTAINER 8341923436
 RUN apt-get update
-ADD jenkins.war /usr/local/tomcat/webapps/
+ADD http://mirrors.jenkins.io/war/latest/jenkins.war /usr/local/tomcat/webapps/
 WORKDIR /usr/local/tomcat/webapps/ >> it is used for after login into the container it will direct to the defined path 
 EXPOSE 8080
 CMD ["catalina.sh","run"]
